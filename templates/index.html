@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container"  style=" margin-left: 1%; margin-top: 10px;">
+   
+        <!-- Fist Card  -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="display-6">Summary</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-box">
+                            <img src="{{ url_for('static', filename='images/celiac_disease_homepage.jpg  ') }}" class="img-thumbnail" alt="Celiac Disease Image">
+                            <p class="card-text">
+                              Celiac disease is a chronic autoimmune disorder characterized by an aberrant immune response to ingested gluten, a protein found in wheat, barley, and rye. The condition primarily affects the small intestine, where the immune response induces inflammation and damage to the intestinal mucosa. This immune-mediated damage leads to villous atrophy, crypt hyperplasia, and compromised absorptive surface area.
+                              Genetic predisposition is a key factor in celiac disease, with the HLA-DQ2 and HLA-DQ8 genes playing a central role. The interaction between these genetic factors and gluten exposure triggers an immune cascade, involving T-cell activation and the production of antibodies against tissue transglutaminase and endomysium.<br>
+                              Clinically, celiac disease manifests with a diverse array of symptoms, ranging from gastrointestinal issues such as diarrhea, abdominal pain, and weight loss to extra-intestinal manifestations, including dermatitis herpetiformis, neurological symptoms, and reproductive disorders. Diagnosis typically involves a combination of serological tests detecting specific antibodies, genetic testing for HLA-DQ2/DQ8, and confirmation through small intestinal biopsy. <br>
+                              Management primarily revolves around strict adherence to a lifelong gluten-free diet. Elimination of gluten from the diet facilitates mucosal healing, alleviates symptoms, and reduces the risk of complications, including nutritional deficiencies, osteoporosis, and an increased susceptibility to certain malignancies. Regular monitoring, dietary education, and support from healthcare professionals are integral components of effective celiac disease management.
+                              
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'navigation_tabs.html' %}
+</div>
+      <script>
+        $(document).ready(function(){
+          $("#tab1").click(function(){
+            $("#myTabs a[href='#content1']").tab('show');
+          });
+          $("#tab2").click(function(){
+            $("#myTabs a[href='#content2']").tab('show');
+          });
+          $("#tab3").click(function(){
+            $("#myTabs a[href='#content3']").tab('show');
+          });
+          $("#tab4").click(function(){
+            $("#myTabs a[href='#content4']").tab('show');
+          });
+        });
+      </script>
+
+{% endblock %}
+
+

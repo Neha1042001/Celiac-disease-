@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celiac Disease</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom_css.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+
+</head>
+<body>
+  
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <span style="font-size: 30px; color: #eae1e1; margin-left: 15px;">   Celiac Disease Database</span> 
+        <div>
+            <a href="/">Home</a>
+            <a href="/food">Gluten Free Food</a>
+            <a href="/database">Gene-Info</a>
+            <a href="/references">References</a>      
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+ 
+
+
+</body>
+</html>

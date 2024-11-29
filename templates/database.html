@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-5">
+        <style>
+            .expanded-row {
+                display: none;
+            }
+            .expanded-row td {
+                padding: 15px;
+            }
+            .additional-info-box {
+                border: 1px solid #ddd;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .info-heading, .info-data {
+                border-right: 1px solid #ddd;
+                height: 100%;
+                margin: 0;  
+                padding: 0;
+            }
+
+            .info-data {
+                border-bottom: 1px solid #ddd;  
+            }
+
+            .info-data:last-child {
+                border-right: none;
+            }
+
+            .info-heading {
+                width: 35%;
+                font-weight: bold;
+            }
+
+            .info-data {
+                width: 85%;
+                text-align: left;
+            }
+        </style>
+
+        <table id="expandableTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Gene Name</th>
+                    <th>Gene Symbol</th>
+                    <th>Role of the gene</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                    <tr class="expandable-row" onclick="toggleRow( {{ loop.index0 }} )" >
+                        <td>{{ row.gene_name }}</td>
+                        <td>{{ row.gene_symbol }}</td>
+                        <td>{{ row.gene_role }}</td>
+                    </tr>
+                    <tr class="expanded-row table table table-bordered" >
+                        <td colspan="3">
+                            <div class="additional-info-box">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="info-heading">Gene Information</div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="info-data">{{ row.gene_information }}</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="info-heading">Reference</div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="info-data">{{ row.gene_references }}</div>
+                                    </div>
+                                </div>
+                                <!-- Add more rows as needed -->
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function toggleRow(index) {
+            var expandedRow = document.getElementsByClassName('expanded-row')[index];
+            if (expandedRow.style.display === 'none' || expandedRow.style.display === '') {
+                expandedRow.style.display = 'table-row';
+            } else {
+                expandedRow.style.display = 'none';
+            }
+        }
+    </script>
+{% endblock %}

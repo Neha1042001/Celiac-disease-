@@ -1,0 +1,86 @@
+/* Navigation Bar */
+.navbar {
+    background-color: #560da4;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Navigation bar links */
+.navbar a {
+    color: #f1e3e3;
+    font-size: 20px;
+    text-decoration: solid;
+    padding: 14px 16px;
+    display: inline-block;
+}
+
+/* On hover, the links will change color */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+/* Set the content width to 90% */
+.content {
+    width: 90%;
+    margin: 0 auto; /* Center the content */
+    padding: 10px;
+}
+
+    .nav-tabs {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+    }
+
+    .nav-tabs .nav-item {
+      margin-bottom: 0;
+    }
+
+    .nav-tabs .nav-link {
+      color: #495057;
+      background-color: #e9ecef;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #ffffff;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .tab-content {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: -1px;
+    }
+
+    .custom-box {
+      border: 1px solid #ecf3f3; 
+      border-radius: 30px; 
+      padding: 20px;
+      overflow: hidden; 
+    }
+
+    .custom-box img {
+        max-width: 70%; 
+        max-height: 450px; 
+        height: auto;
+        border-radius: 15px; 
+        float: right; 
+        margin: 0 0 15px 15px; 
+    }
+
+    .custom-box p {
+        font-size: 20px;
+        text-align: justify;
+    }

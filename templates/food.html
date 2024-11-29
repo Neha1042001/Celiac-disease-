@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="card mt-5">
+        <div class="card-header">The list below comprises gluten-free foods suitable for individuals suffering from Celiac Disease:</div>
+        <div class="card-body">
+            <div class="container">
+    <table class="table table-bordered table-sm table-striped">
+        <thead>
+            <tr>
+                <th>Food type </th>
+                <th>Food name </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in eat_food %}
+                <tr>
+                    <td>{{ row.food_type }}</td>
+                    <td>{{ row.food_name }}</td>
+                </tr>
+            {% endfor %}
+    
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+    <div class="card mt-5">
+        <div class="card-header">Following are the food's one should avoid suffering from Celiac Disease:</div>
+        <div class="card-body">
+            <div class="container">
+<table class="table table-bordered table-sm table-striped">
+    <tbody>
+        {% for x in not_eat_food %}
+            <tr>
+               <td>{{ x }}</td>
+            </tr>
+        {% endfor %}
+
+
+    </tbody>
+</table>
+
+
+</div>
+{% endblock %}

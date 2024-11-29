@@ -1,0 +1,28 @@
+
+{%extends 'base.html'%}
+{% block content %}
+<div class="container mt-5">
+    <div class="card mt-5">
+        <div class="card-header">Following are the references used to acquire this data:</div>
+        <div class="card-body">
+            <div class="container">
+<table class="table table-bordered table-sm table-striped">
+    <thead>
+        <tr>
+            <th>
+                References
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in references %}
+            <tr>
+               <td>{{ x }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+{% endblock %}
